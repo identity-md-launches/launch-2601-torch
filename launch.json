@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "TorchToken",
+    "name": "Torch",
+    "symbol": "TORCH",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "economics": {
+    "poolBps": 8000,
+    "initialMarketCapWei": "2500000000000000000000",
+    "remainderTo": "0x206f5dbf4f135c6183b5a5b99327fa0be34cb4d9"
+  },
+  "notes": "TorchToken (src/TorchToken.sol) is a plain fixed-supply ERC-20: name Torch, symbol TORCH, 18 decimals. Its constructor takes no arguments and mints the whole supply of 1,000,000,000 TORCH (1000000000000000000000000000 minor units) once to msg.sender, the factory, which pays it out. There is no owner, no mint after deployment, no burn, no fee or tax on transfer, no pause, blocklist, freeze or seize, no upgrade path and no external calls, so every launch flow (factory to distributor, distributor to claimant, factory to pool, pool to and from traders) moves exactly the amount asked for. No application contracts are deployed with this launch. The pool pairs with IMD at 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 at the launch policy's 1.25% fee; the deployer derives the opening price from economics.initialMarketCapWei and the supply, and pool.initialPrice is provenance only."
+}
